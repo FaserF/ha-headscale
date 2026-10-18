@@ -1,6 +1,6 @@
 [project]
 name = "ha-headscale"
-version = "0.1.0b0"
+version = "0.1.1-dev0"
 description = "Home Assistant integration for Headscale and Tailscale mesh VPN control planes."
 authors = [
     {name = "FaserF", email = "github@fabiseitz.de"}
