@@ -6,9 +6,9 @@
   ],
   "config_flow": true,
   "documentation": "https://github.com/FaserF/ha-headscale",
-  "issue_tracker": "https://github.com/FaserF/ha-headscale/issues",
   "integration_type": "hub",
   "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/FaserF/ha-headscale/issues",
   "requirements": [
     "tailscale>=1.0.0"
   ],
