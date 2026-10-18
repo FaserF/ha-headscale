@@ -53,7 +53,6 @@ class HeadscaleEntity(CoordinatorEntity[HeadscaleDataUpdateCoordinator]):
             else "Headscale",
             model=model_name,
             name=dev.name,
-            sw_version=dev.register_method,
         )
 
 

@@ -13,7 +13,7 @@
         "title": "Headscale Server Configuration",
         "description": "Enter your Headscale base URL and API Key.",
         "data": {
-          "url": "Server URL (e.g. https://vpn.fabiseitz.de:8443)",
+          "url": "Server URL",
           "api_key": "API Key",
           "verify_ssl": "Verify SSL Certificate"
         }

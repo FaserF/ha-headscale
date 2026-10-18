@@ -53,6 +53,7 @@ NODE_SENSORS: tuple[HeadscaleSensorEntityDescription, ...] = (
             "tags": device.tags,
             "approved_routes": device.approved_routes,
             "available_routes": device.available_routes,
+            "register_method": device.register_method,
         },
     ),
     HeadscaleSensorEntityDescription(
