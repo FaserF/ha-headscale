@@ -18,7 +18,7 @@ body:
     attributes:
       label: Integration Version
       description: Which version of ha-omniroute are you running? (HACS or integration page)
-      placeholder: e.g. v0.1.0b0
+      placeholder: e.g. v0.1.0b1
     validations:
       required: true
 
