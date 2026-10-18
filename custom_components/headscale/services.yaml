@@ -1,0 +1,168 @@
+expire_node:
+  name: Expire Node
+  description: Force expiration of a Headscale node registration key.
+  fields:
+    node_id:
+      name: Node ID
+      description: The numerical ID or unique identifier of the node.
+      required: true
+      example: "1"
+      selector:
+        text:
+
+rename_node:
+  name: Rename Node
+  description: Rename a Headscale node.
+  fields:
+    node_id:
+      name: Node ID
+      description: The numerical ID of the node to rename.
+      required: true
+      example: "1"
+      selector:
+        text:
+    new_name:
+      name: New Name
+      description: The new DNS/hostname for the node.
+      required: true
+      example: "my-phone"
+      selector:
+        text:
+
+delete_node:
+  name: Delete Node
+  description: Permanently remove a node from Headscale.
+  fields:
+    node_id:
+      name: Node ID
+      description: The numerical ID of the node to delete.
+      required: true
+      example: "1"
+      selector:
+        text:
+
+set_node_tags:
+  name: Set Node Tags
+  description: Assign ACL tags to a node.
+  fields:
+    node_id:
+      name: Node ID
+      description: The numerical ID of the node.
+      required: true
+      example: "1"
+      selector:
+        text:
+    tags:
+      name: Tags
+      description: List of tags to set (e.g. tag:server).
+      required: true
+      example: ["tag:server", "tag:vpn"]
+      selector:
+        object:
+
+set_approved_routes:
+  name: Set Approved Routes
+  description: Approve or revoke advertised subnet routes for a node.
+  fields:
+    node_id:
+      name: Node ID
+      description: The numerical ID of the node.
+      required: true
+      example: "2"
+      selector:
+        text:
+    routes:
+      name: Routes
+      description: List of approved CIDR routes.
+      required: true
+      example: ["192.168.1.0/24", "0.0.0.0/0"]
+      selector:
+        object:
+
+create_preauthkey:
+  name: Create Pre-Auth Key
+  description: Generate a new pre-authenticated key for registering new machines.
+  fields:
+    user:
+      name: User
+      description: The Headscale user who will own the machine.
+      required: true
+      example: "fabian"
+      selector:
+        text:
+    reusable:
+      name: Reusable
+      description: Whether the key can be used multiple times.
+      required: false
+      default: false
+      selector:
+        boolean:
+    ephemeral:
+      name: Ephemeral
+      description: Whether devices registered with this key should be ephemeral.
+      required: false
+      default: false
+      selector:
+        boolean:
+    expiration:
+      name: Expiration
+      description: ISO timestamp when this key expires.
+      required: false
+      example: "2027-01-01T00:00:00Z"
+      selector:
+        text:
+    tags:
+      name: Tags
+      description: ACL tags to apply automatically to machines registered with this key.
+      required: false
+      selector:
+        object:
+
+expire_preauthkey:
+  name: Expire Pre-Auth Key
+  description: Invalidate an active pre-auth key.
+  fields:
+    user:
+      name: User
+      description: Owner user of the key.
+      required: true
+      example: "fabian"
+      selector:
+        text:
+    key:
+      name: Key Prefix or Full Key
+      description: The auth key to expire.
+      required: true
+      selector:
+        text:
+
+create_user:
+  name: Create User
+  description: Create a new user namespace on the Headscale server.
+  fields:
+    user:
+      name: Username
+      description: Unique username for the new user.
+      required: true
+      example: "newuser"
+      selector:
+        text:
+
+rename_user:
+  name: Rename User
+  description: Rename an existing user namespace.
+  fields:
+    old_user:
+      name: Old Username
+      description: Existing user name.
+      required: true
+      example: "oldname"
+      selector:
+        text:
+    new_user:
+      name: New Username
+      description: New user name.
+      required: true
+      example: "newname"
+      selector:
+        text:

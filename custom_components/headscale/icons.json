@@ -1,0 +1,37 @@
+{
+  "entity": {
+    "binary_sensor": {
+      "connected_to_control": {
+        "default": "mdi:vpn"
+      },
+      "server_online": {
+        "default": "mdi:server-network"
+      }
+    },
+    "sensor": {
+      "ip": {
+        "default": "mdi:ip-network"
+      },
+      "node_user": {
+        "default": "mdi:account"
+      },
+      "total_nodes": {
+        "default": "mdi:devices"
+      },
+      "online_nodes": {
+        "default": "mdi:lan-connect"
+      },
+      "total_users": {
+        "default": "mdi:account-group"
+      }
+    },
+    "button": {
+      "expire_node": {
+        "default": "mdi:timer-off-outline"
+      },
+      "refresh_data": {
+        "default": "mdi:refresh"
+      }
+    }
+  }
+}

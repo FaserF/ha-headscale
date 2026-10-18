@@ -1,0 +1,12 @@
+{
+  "domain": "headscale",
+  "name": "Headscale",
+  "codeowners": ["@FaserF"],
+  "config_flow": true,
+  "documentation": "https://github.com/FaserF/ha-headscale",
+  "issue_tracker": "https://github.com/FaserF/ha-headscale/issues",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "requirements": ["tailscale>=1.0.0"],
+  "version": "0.1.0b0"
+}

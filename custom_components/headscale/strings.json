@@ -1,0 +1,112 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Select Mesh VPN Provider",
+        "description": "Choose whether you want to connect to a self-hosted Headscale instance or Tailscale SaaS.",
+        "menu_options": {
+          "headscale": "Headscale (Self-Hosted)",
+          "tailscale": "Tailscale (Official SaaS)"
+        }
+      },
+      "headscale": {
+        "title": "Headscale Server Configuration",
+        "description": "Enter your Headscale base URL and API Key.",
+        "data": {
+          "url": "Server URL (e.g. https://vpn.fabiseitz.de:8443)",
+          "api_key": "API Key",
+          "verify_ssl": "Verify SSL Certificate"
+        }
+      },
+      "tailscale": {
+        "title": "Tailscale OAuth Configuration",
+        "description": "Enter your Tailscale Tailnet and OAuth client credentials.",
+        "data": {
+          "tailnet": "Tailnet (e.g. example.com)",
+          "oauth_client_id": "OAuth Client ID",
+          "oauth_client_secret": "OAuth Client Secret"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to server.",
+      "invalid_auth": "Invalid authentication credentials.",
+      "unknown": "Unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This Headscale/Tailscale instance is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Headscale Options",
+        "data": {
+          "verify_ssl": "Verify SSL Certificate"
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "connected_to_control": {
+        "name": "Connected to control"
+      },
+      "client": {
+        "name": "Update available"
+      },
+      "key_expiry_disabled": {
+        "name": "Key expiry disabled"
+      },
+      "client_supports_ipv6": {
+        "name": "IPv6 support"
+      },
+      "client_supports_pcp": {
+        "name": "PCP support"
+      },
+      "client_supports_pmp": {
+        "name": "NAT-PMP support"
+      },
+      "client_supports_udp": {
+        "name": "UDP support"
+      },
+      "client_supports_upnp": {
+        "name": "UPnP support"
+      },
+      "server_online": {
+        "name": "Control plane online"
+      }
+    },
+    "sensor": {
+      "expires": {
+        "name": "Key expiration"
+      },
+      "ip": {
+        "name": "Tailscale IP"
+      },
+      "last_seen": {
+        "name": "Last seen"
+      },
+      "node_user": {
+        "name": "Owner user"
+      },
+      "total_nodes": {
+        "name": "Total nodes"
+      },
+      "online_nodes": {
+        "name": "Online nodes"
+      },
+      "total_users": {
+        "name": "Total users"
+      }
+    },
+    "button": {
+      "expire_node": {
+        "name": "Expire node key"
+      },
+      "refresh_data": {
+        "name": "Refresh data"
+      }
+    }
+  }
+}
