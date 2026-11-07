@@ -12,5 +12,6 @@
   "requirements": [
     "tailscale>=1.0.0"
   ],
-  "version": "0.1.1-dev0"
+  "version": "0.1.1-dev0",
+  "quality_scale": "platinum"
 }
