@@ -9,13 +9,24 @@
   "rangeStrategy": "pin",
   "packageRules": [
     {
+      "description": "Preserve >= minimum pins in HA manifests and test requirements for Hassfest/HA Core compatibility",
+      "matchFileNames": [
+        "custom_components/**/manifest.json",
+        "requirements*.txt"
+      ],
+      "rangeStrategy": "replace"
+    },
+    {
       "matchCategories": [
         "python"
       ],
       "enabled": true
     },
     {
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "matchCurrentVersion": "!/^0/",
       "automerge": true
     }
